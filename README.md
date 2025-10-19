@@ -1,6 +1,6 @@
-Program napisany przy pomocy edytora MS Visual Studio Code oraz kompilatora clang.
+// Program napisany przy pomocy edytora MS Visual Studio Code oraz kompilatora clang.
 
-Kompilacja:
+// Kompilacja:
 
 clang-cl waluty.c
 waluty.c(8,5): warning: 'scanf' is deprecated: This function or variable may be unsafe. Consider using scanf_s instead.
@@ -37,7 +37,8 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.3520
       |                                               ^
 2 warnings generated.
 
-Uruchomienie:
+// Uruchomienie:
+
 C:\Users\X\Desktop\praca C>waluty.exe
 Podaj kwote w PLN:50
 Podaj kurs USD/PLN: 0
