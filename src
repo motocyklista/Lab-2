@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(void) {
+    float amountPLN, rate, amountUSD;
+
+    // kwota do przeliczenia w złotówkach
+    printf("Podaj kwote w PLN:");
+    scanf("%f", &amountPLN);
+
+    // kurs dolara
+
+    printf("Podaj kurs USD/PLN: ");
+    scanf("%f", &rate);
+
+    if (rate <= 0) {
+        printf("Błąd: podaj poprawny kurs.\n");
+        return 1;
+    }
+
+    // Wynik końcowy, kwota w dolarach
+
+    amountUSD = amountPLN / rate;
+    printf("Kwota w dolarach USD: %.2f\n", amountUSD);
+
+    return 0;
+}
