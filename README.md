@@ -1,1 +1,50 @@
-# Lab-2
+Program napisany przy pomocy edytora MS Visual Studio Code oraz kompilatora clang.
+
+Kompilacja:
+
+clang-cl waluty.c
+waluty.c(8,5): warning: 'scanf' is deprecated: This function or variable may be unsafe. Consider using scanf_s instead.
+      To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+    8 |     scanf("%f", &amountPLN);
+      |     ^
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h(1275,20): note: 'scanf' has been explicitly
+      marked deprecated here
+ 1275 |     _Check_return_ _CRT_INSECURE_DEPRECATE(scanf_s)
+      |                    ^
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(368,55): note:
+      expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(358,47): note:
+      expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+waluty.c(13,5): warning: 'scanf' is deprecated: This function or variable may be unsafe. Consider using scanf_s instead.
+      To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+   13 |     scanf("%f", &rate);
+      |     ^
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h(1275,20): note: 'scanf' has been explicitly
+      marked deprecated here
+ 1275 |     _Check_return_ _CRT_INSECURE_DEPRECATE(scanf_s)
+      |                    ^
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(368,55): note:
+      expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(358,47): note:
+      expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+2 warnings generated.
+
+Uruchomienie:
+C:\Users\X\Desktop\praca C>waluty.exe
+Podaj kwote w PLN:50
+Podaj kurs USD/PLN: 0
+Kwota w dolarach USD: inf
+
+
+C:\Users\X\Desktop\praca C>waluty.exe
+Podaj kwote w PLN:10
+Podaj kurs USD/PLN: 3.64
+Kwota w dolarach USD: 2.75
