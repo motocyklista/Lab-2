@@ -12,10 +12,6 @@ int main(void) {
     printf("Podaj kurs USD/PLN: ");
     scanf("%f", &rate);
 
-    if (rate <= 0) {
-        printf("Błąd: podaj poprawny kurs.\n");
-        return 1;
-    }
 
     // Wynik końcowy, kwota w dolarach
 
