@@ -34,7 +34,8 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.3520
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(358,47): note:
       expanded from macro '_CRT_DEPRECATE_TEXT'
   358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
-      |                                 
+      |      
+2 warnings generated.
 
 // Uruchomienie:
 
