@@ -1,10 +1,10 @@
-## Program: Przelicznik walut (PLN → USD)
+#  Program: Przelicznik walut (PLN → USD)
 
 Prosty program napisany w języku C, który przelicza kwotę w złotówkach (PLN) na dolary amerykańskie (USD) na podstawie podanego kursu walutowego.
 
 ---
 
-## Informacje techniczne
+##  Informacje techniczne
 
 - **Język:** C  
 - **Edytor:** Microsoft Visual Studio Code  
@@ -23,7 +23,7 @@ clang-cl waluty.c
 
 > 💡 **Uwaga:** Kompilator może wyświetlić ostrzeżenia dotyczące funkcji `scanf`.
 > Jest to normalne w środowisku Visual Studio — można je pominąć lub użyć `scanf_s`.
-> Jeśli chcesz wyłączyć ostrzeżenie, możesz dodać do pliku na początku:
+> Jeśli chcesz wyłączyć ostrzeżenie, możesz dodać na początku pliku:
 >
 > ```c
 > #define _CRT_SECURE_NO_WARNINGS
@@ -41,7 +41,7 @@ waluty.exe
 
 ---
 
-###  Przykład działania:
+###  Przykład działania
 
 ```
 Podaj kwote w PLN: 10
@@ -51,6 +51,28 @@ Kwota w dolarach USD: 2.75
 
 ---
 
+##  Opis działania programu
+
+1. Program wczytuje od użytkownika:
+
+   * **amountPLN** – kwotę w złotówkach (PLN)
+   * **rate** – kurs dolara (USD/PLN)
+
+2. Oblicza **kwotę w dolarach** według wzoru:
+
+   ```
+   amountUSD = amountPLN / rate
+   ```
+
+3. Wynik jest zapisywany w zmiennej `amountUSD` i wyświetlany na ekranie z dokładnością do dwóch miejsc po przecinku:
+
+   ```
+   Kwota w dolarach USD: X.XX
+   ```
+
+4. Program kończy działanie po wyświetleniu wyniku.
+
+---
 
 ## 👤 Autor
 
