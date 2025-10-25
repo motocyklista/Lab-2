@@ -1,6 +1,6 @@
-# Program: Kalkulator marży
+#  Program: Kalkulator marży
 
-Prosty program napisany w języku C, który oblicza cenę sprzedaży brutto na podstawie podanej ceny zakupu netto (PLN) oraz procentowej marży.
+Prosty program napisany w języku C, który oblicza cenę sprzedaży produktu na podstawie podanej ceny zakupu netto (PLN) oraz marży procentowej.
 
 ---
 
@@ -23,7 +23,7 @@ clang-cl marza.c
 
 > 💡 **Uwaga:** Kompilator może wyświetlić ostrzeżenia dotyczące funkcji `scanf`.
 > Jest to normalne w środowisku Visual Studio — można je pominąć lub użyć `scanf_s`.
-> Jeśli chcesz wyłączyć ostrzeżenie, możesz dodać do pliku na początku:
+> Jeśli chcesz wyłączyć ostrzeżenie, możesz dodać na początku pliku:
 >
 > ```c
 > #define _CRT_SECURE_NO_WARNINGS
@@ -57,10 +57,10 @@ Cena sprzedazy: 22.00 PLN
 
 ##  Opis działania programu
 
-1. Program pobiera od użytkownika:
+1. Program wczytuje od użytkownika dwie wartości:
 
-   * **cenę zakupu netto (PLN)**
-   * **marżę procentową**
+   * **purchaseNet** – cena zakupu netto w złotówkach (PLN)
+   * **marginPercent** – wysokość marży wyrażoną w procentach
 
 2. Następnie oblicza **cenę sprzedaży** według wzoru:
 
@@ -68,9 +68,16 @@ Cena sprzedazy: 22.00 PLN
    \text{Cena sprzedaży} = \text{Cena zakupu netto} \times \left(1 + \frac{\text{Marża}}{100}\right)
    ]
 
-3. Wynik jest wyświetlany w złotówkach z dokładnością do dwóch miejsc po przecinku.
+3. Wynik jest zapisywany w zmiennej `sellingPrice` i wyświetlany na ekranie z dokładnością do dwóch miejsc po przecinku:
+
+   ```
+   Cena sprzedazy: X.XX PLN
+   ```
+
+4. Program kończy działanie po wyświetleniu wyniku.
 
 ---
+
 
 
 ## 👤 Autor
