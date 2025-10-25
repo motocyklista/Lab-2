@@ -1,6 +1,6 @@
 flowchart TD
     Start([Start]) --> A[Wczytaj purchaseNet (cena zakupu netto)]
-    A --> B[Wczytaj marginPercent (marża %)]
+    A --> B[Wczytaj marginPercent (marza %)]
     B --> C[Oblicz sellingPrice = purchaseNet * (1 + marginPercent / 100)]
-    C --> D[Wyświetl sellingPrice z dokładnością do 2 miejsc]
+    C --> D[Wyswietl sellingPrice z dokladnoscia do 2 miejsc]
     D --> End([STOP])
