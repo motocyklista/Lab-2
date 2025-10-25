@@ -64,9 +64,7 @@ Cena sprzedazy: 22.00 PLN
 
 2. Następnie oblicza **cenę sprzedaży** według wzoru:
 
-   [
-   \text{Cena sprzedaży} = \text{Cena zakupu netto} \times \left(1 + \frac{\text{Marża}}{100}\right)
-   ]
+  Cena sprzedaży = Cena zakupu netto × (1 + Marża / 100)
 
 3. Wynik jest zapisywany w zmiennej `sellingPrice` i wyświetlany na ekranie z dokładnością do dwóch miejsc po przecinku:
 
