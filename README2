@@ -1,50 +1,82 @@
-// Program napisany przy pomocy edytora MS Visual Studio Code oraz kompilatora clang.
+# Program: Kalkulator marży
 
-// Kompilacja:
+Prosty program napisany w języku C, który oblicza cenę sprzedaży brutto na podstawie podanej ceny zakupu netto (PLN) oraz procentowej marży.
 
-C:\Users\X\Desktop\praca C>clang-cl marza.c
-marza.c(6,1): warning: 'scanf' is deprecated: This function or variable may be unsafe. Consider using scanf_s instead.
-      To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
-    6 | scanf("%f", &purchaseNet);
-      | ^
-C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h(1275,20): note: 'scanf' has been explicitly
-      marked deprecated here
- 1275 |     _Check_return_ _CRT_INSECURE_DEPRECATE(scanf_s)
-      |                    ^
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(368,55): note:
-      expanded from macro '_CRT_INSECURE_DEPRECATE'
-  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
-      |                                                       ^
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(358,47): note:
-      expanded from macro '_CRT_DEPRECATE_TEXT'
-  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
-      |                                               ^
-marza.c(9,1): warning: 'scanf' is deprecated: This function or variable may be unsafe. Consider using scanf_s instead.
-      To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
-    9 | scanf("%f", &marginPercent);
-      | ^
-C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h(1275,20): note: 'scanf' has been explicitly
-      marked deprecated here
- 1275 |     _Check_return_ _CRT_INSECURE_DEPRECATE(scanf_s)
-      |                    ^
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(368,55): note:
-      expanded from macro '_CRT_INSECURE_DEPRECATE'
-  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
-      |                                                       ^
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(358,47): note:
-      expanded from macro '_CRT_DEPRECATE_TEXT'
-  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
-      |      
-2 warnings generated.
+---
 
-// Uruchomienie:
+##  Informacje techniczne
 
-C:\Users\X\Desktop\praca C>marza
+- **Język:** C  
+- **Edytor:** Microsoft Visual Studio Code  
+- **Kompilator:** `clang-cl` (z pakietu LLVM / Visual Studio)  
+- **System:** Windows  
+
+---
+
+##  Kompilacja
+
+Aby skompilować program, uruchom w terminalu polecenie:
+
+```bash
+clang-cl marza.c
+````
+
+> 💡 **Uwaga:** Kompilator może wyświetlić ostrzeżenia dotyczące funkcji `scanf`.
+> Jest to normalne w środowisku Visual Studio — można je pominąć lub użyć `scanf_s`.
+> Jeśli chcesz wyłączyć ostrzeżenie, możesz dodać do pliku na początku:
+>
+> ```c
+> #define _CRT_SECURE_NO_WARNINGS
+> ```
+
+---
+
+##  Uruchomienie programu
+
+Po udanej kompilacji uruchom plik wykonywalny:
+
+```bash
+marza.exe
+```
+
+###  Przykład działania:
+
+```
 Podaj cene zakupu netto (PLN): 10
-Podaj marze w % 1
+Podaj marze w %: 1
 Cena sprzedazy: 10.10 PLN
+```
 
-C:\Users\X\Desktop\praca C>marza
+```
 Podaj cene zakupu netto (PLN): 20
-Podaj marze w % 10
+Podaj marze w %: 10
 Cena sprzedazy: 22.00 PLN
+```
+
+---
+
+##  Opis działania programu
+
+1. Program pobiera od użytkownika:
+
+   * **cenę zakupu netto (PLN)**
+   * **marżę procentową**
+
+2. Następnie oblicza **cenę sprzedaży** według wzoru:
+
+   [
+   \text{Cena sprzedaży} = \text{Cena zakupu netto} \times \left(1 + \frac{\text{Marża}}{100}\right)
+   ]
+
+3. Wynik jest wyświetlany w złotówkach z dokładnością do dwóch miejsc po przecinku.
+
+---
+
+
+## 👤 Autor
+
+* **Imię / Pseudonim:** Piotr
+* **Rok:** 2025
+* **Środowisko:** Visual Studio Code + clang
+
+---
